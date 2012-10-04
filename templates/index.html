@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Twitter Feed App</title>
+	<script src="/static/jquery.js" type="text/javascript"></script>
+	<script src="/static/backbone/test/vendor/json2.js" type="text/javascript"></script>
+	<script src="/static/backbone/test/vendor/underscore-1.2.2.js" type="text/javascript"></script>
+	<script src="/static/backbone/backbone.js" type="text/javascript"></script>
+	
+	<link href="/static/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	
+	
+	<div id= "overlay" align="center">
+	
+		<div class="twitter-feed span6">
+		<div class="" id="global-nav-search" >
+ 		<input type="text" class="search-input" id="search-text" placeholder="Search" name="q" autocomplete="off" spellcheck="false" tabindex="4">
+		<input type="submit" class="search button btn-primary" value="Search" id="search-button" >
+		    
+	</div>  
+	<script type ="text/javascript">
+		var onClickOneHandler = function() {
+		var searchVal =  $("#search-text").val();
+		
+		};
+	//		<!-- $('global-nav-search').submit(onClickOneHandler); -->
+		</script>
+	
+	<div id="wrap" align="center" >
+	<div id="cont" align="center">
+		<ul class="unstyled">
+		</ul>
+	</div>
+	
+ 	<script type="text/html" id="tweet-view">
+ 		<li class="tweet-item">
+		 	<%= text %> - <%= created_at %>
+	 	</li>
+    </script>
+    
+ 	<script type="text/html" id="tweet-view-pic">
+ 		<li class="tweet-item well">
+ 			<img src="<%= profile_image_url %>"></img>
+		 	<%= text %> - <%= created_at %>
+	 	</li>
+    </script>
+ 	<script type="text/html" id="tweet-view-two">
+	    <li class="tweet">
+	            <span>
+	 
+	                <div class="head">
+	                    <img class="pic" src="<%= profile_image_url %>" />
+	                    <p class="userId"><%= "@" + from_user %></p>
+	                 </div>
+	 
+	                 <div class="tail">
+	                    <p><%= text %></p>
+	                    <p class="created"><%= created_at %></p>
+	                 </div>
+	                 <hr />
+	            </span>
+	   </li> 
+    </script>
+
+	<script src="/static/app.js" type="text/javascript"></script>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+</body>
+</html>

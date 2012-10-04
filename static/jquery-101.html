@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>jQuery 101</title>
+		<script src="jquery.js" type="text/javascript"></script>
+		<link href="bootstrap.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	<input type "text" id="search-bar"></input>
+		<div id="button-one" class="buttons btn"> Click One </div>
+		<div id="button-two" class="buttons btn"> Click Two </div>
+		<div id="button-three" class="buttons btn"> Click Three </div>
+		<div id="button-four" class="buttons btn"> Click Four </div>
+		<div id="button-five" class="buttons btn"> Click Five </div>
+		<div id="button-six" class="buttons btn"> Click Six </div>
+		
+		<ul>
+		</ul>
+		
+		
+		<script type="text/javascript">
+			/*var myButtons = document.getElementsByClassName('buttons');
+			for (var i=0; i<myButtons.length; i++) {
+				myButtons[i].innerHTML = 'haha';
+				}
+			
+			
+		$(".buttons").text("candyd);
+		*/	
+		var onClickOneHandler = function() {
+		var searchVal =  $("#search-bar").val();
+		 alert(searchVal);
+		 };
+			$("#button-one").click(onClickOneHandler);
+			
+			var onClickTwoHandler = function() {
+			var searchVal =  $("#search-bar").val();
+				$('ul').append("<li>" + searchVal + "</li>");
+				 };
+				 
+			$("#button-two").click(onClickTwoHandler);
+			
+			
+			</script>
+	</body>
+</html>
